@@ -1,0 +1,11 @@
+{
+    "name": "bronanza/laravel-ongkir",
+    "authors": [
+        {
+            "name": "Erick Kurniawan",
+            "email": "ek110193@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
