@@ -1,11 +1,25 @@
 {
     "name": "bronanza/laravel-ongkir",
+    "description": "This package provides the use of raja ongkir API",
+    "license": "MIT",
     "authors": [
         {
             "name": "Erick Kurniawan",
-            "email": "ek110193@gmail.com"
+            "email": "erickkur11@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "php": ">=5.5.9",
+        "guzzlehttp/guzzle": "^6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.1",
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bronanza\\Ongkir\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
 }
