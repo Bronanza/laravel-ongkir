@@ -13,7 +13,9 @@ class OngkirServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        $this->publishes([
+            __DIR__.'/../../config/raja-ongkir.php' =>  config_path('raja-ongkir.php'),
+        ]);
     }
 
     /**
@@ -23,16 +25,8 @@ class OngkirServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerOngkir();
-    }
-
-    /**
-     * Register the application bindings.
-     *
-     * @return void
-     */
-    private function registerOngkir()
-    {
-
+        $this->mergeConfigFrom(
+            __DIR__.'/../../config/raja-ongkir.php', 'raja-ongkir'
+        );
     }
 }
