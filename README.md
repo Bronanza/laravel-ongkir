@@ -1,4 +1,4 @@
-# laravel-ongkir
+# Laravel-Ongkir
 
 Laravel ongkir provide the use of raja ongkir API in Laravel 5.
 
@@ -45,4 +45,51 @@ return [
 use Bronanza\LaravelOngkir\Ongkir;
 ```
 
-2)
+2) Now you can use Laravel-Ongkir:
+```php
+<?php
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use Bronanza\LaravelOngkir\Ongkir;
+
+class TestController extends Controller
+{
+    private $laravelOngkir;
+
+    public function __construct(Ongkir $ongkir)
+    {
+        $this->laravelOngkir = $ongkir;
+    }
+
+    public function getAllAvailableProvinces()
+    {
+        return $this->laravelOngkir->getAllAvailableProvinces();
+    }
+
+    public function getAllAvailableCities()
+    {
+        return $this->laravelOngkir->getAllAvailableCities();
+    }
+
+    public function getAvailableCities()
+    {
+        return $this->laravelOngkir->getAvailableCities("5");
+    }
+
+    public function getCosts()
+    {
+        return $this->laravelOngkir->getCosts("501", "114", 1700, "jne");
+    }
+}
+```
+
+`getAllAvailableProvinces()` &mdash; use this method to get all available provinces in Indonesia.
+`getAllAvailableCities()` &mdash; use this method to get all available cities in Indonesia.
+`getAvailableCities()` &mdash; use this method to get available cities for the given province code. This method need 1 paramater:
+- `string` province id - Province ID in Indonesia
+`getCosts()` &mdash; use this method to get shipment cost based on weight and location. This method need 4 parameter:
+- `string` origin id - City origin
+- `string` rajaongkir city id - City destination
+- `int` weight - Shipment weight in gram
+- `string` courier - The available courier code: `jne`, `pos`, `tiki`.
