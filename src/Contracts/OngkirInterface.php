@@ -36,14 +36,4 @@ interface OngkirInterface
      * @return mixed[] - Array of cities objects.
      */
     public function getAvailableCities($provinceCode);
-
-    /**
-     * Get available districts for the given province code.
-     *
-     * @param string $cityCode - The city code got from
-     *     ShipmentInterface::getAvailableCities()
-     * @return mixed[] - Array of districts objects.
-     */
-    public function getAvailableSubDistricts($cityCode);
-
 }

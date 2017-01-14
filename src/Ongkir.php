@@ -149,24 +149,4 @@ class Ongkir implements OngkirInterface
 
         return $this->result($response);
     }
-
-    /**
-     * Get available districts for the given province code.
-     *
-     * @param string $cityCode - The city code got from
-     *     RajaOngkir::getAvailableCities()
-     * @return mixed[] - Array of districts objects.
-     */
-    public function getAvailableSubDistricts($cityCode)
-    {
-        $options = $this->options([
-            'query' => [
-                'city' => $cityCode
-            ]
-        ]);
-
-        $response = $this->httpClient->get($this->api('subDistricts'), $options);
-
-        return $this->result($response);
-    }
 }
