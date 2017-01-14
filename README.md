@@ -45,4 +45,4 @@ return [
 use Bronanza\LaravelOngkir\Ongkir;
 ```
 
-2) 
+2)
