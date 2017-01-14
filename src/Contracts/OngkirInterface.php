@@ -6,8 +6,8 @@ interface OngkirInterface
     /**
      * Get shipment cost based on weight and location.
      *
-     * @param int $originId
-     * @param int $rajaongkirCityId
+     * @param string $originId
+     * @param string $rajaongkirCityId
      * @param int $weight
      * @param string $courier
      * @return mixed[] - Array of costs objects.
@@ -31,8 +31,7 @@ interface OngkirInterface
     /**
      * Get available cities for the given province code.
      *
-     * @param string $provinceCode - The province code got from
-     *     ShipmentInterface::getAvailableProvinces()
+     * @param string $provinceCode
      * @return mixed[] - Array of cities objects.
      */
     public function getAvailableCities($provinceCode);

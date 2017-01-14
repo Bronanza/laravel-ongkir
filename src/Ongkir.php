@@ -65,7 +65,7 @@ class Ongkir implements OngkirInterface
 
     /**
      * Create api url for raja ongkir
-     * @param string $endPoint
+     * @param string $endPointKey
      * @return string
      */
     public function api($endPointKey)
@@ -78,8 +78,8 @@ class Ongkir implements OngkirInterface
     /**
      * Get shipment cost based on weight and location.
      *
-     * @param int $originId
-     * @param int $rajaongkirCityId
+     * @param string $originId
+     * @param string $rajaongkirCityId
      * @param int $weight
      * @param string $courier
      * @return mixed[] - Array of costs objects.
@@ -101,7 +101,7 @@ class Ongkir implements OngkirInterface
     }
 
     /**
-     * Get available provinces.
+     * Get all available provinces.
      *
      * @return stdClass - Array of province objects.
      */
@@ -133,8 +133,7 @@ class Ongkir implements OngkirInterface
     /**
      * Get available cities for the given province code.
      *
-     * @param string $provinceCode - The province code got from
-     *     RajaOngkir::getAvailableProvinces()
+     * @param string $provinceCode
      * @return mixed[] - Array of cities objects.
      */
     public function getAvailableCities($provinceCode)
