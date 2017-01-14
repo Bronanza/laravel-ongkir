@@ -15,11 +15,11 @@ interface OngkirInterface
     public function getCosts($originId, $rajaongkirCityId, $weight, $courier);
 
     /**
-     * Get available provinces.
+     * Get all available provinces.
      *
      * @return mixed[] - Array of province objects.
      */
-    public function getAvailableProvinces();
+    public function getAllAvailableProvinces();
 
     /**
      * Get all available cities.

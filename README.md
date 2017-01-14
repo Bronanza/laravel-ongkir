@@ -1,5 +1,12 @@
 # laravel-ongkir
 
+Laravel ongkir provide the use of raja ongkir API in Laravel 5.
+
+## Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+
 ## Installation
 
 1) To install laravel-ongkir, add the following code to composer.json. Then run `composer update`:
@@ -17,7 +24,7 @@ Bronanza\LaravelOngkir\OngkirServiceProvider::class,
 php artisan vendor:publish
 ```
 
-4) You can fill `api key` for raja ongkir in `config/ongkir.php`
+4) You can fill `api key` for laravel ongkir in `config/ongkir.php`
 ```php
 <?php
 
@@ -33,3 +40,9 @@ return [
 ```
 ## Usage
 
+1) Add the following code in your class file:
+```php
+use Bronanza\LaravelOngkir\Ongkir;
+```
+
+2) 

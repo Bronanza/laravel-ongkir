@@ -105,7 +105,7 @@ class Ongkir implements OngkirInterface
      *
      * @return stdClass - Array of province objects.
      */
-    public function getAvailableProvinces()
+    public function getAllAvailableProvinces()
     {
         $response = $this->httpClient->get(
             $this->api('provinces'),
