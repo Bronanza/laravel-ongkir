@@ -1,6 +1,4 @@
-<?php
-
-namespace Bronanza\Ongkir\Contracts;
+<?php namespace Bronanza\LaravelOngkir\Contracts;
 
 
 interface OngkirInterface
