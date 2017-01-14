@@ -1,10 +1,8 @@
-<?php
-
-namespace Bronanza\Ongkir;
+<?php namespace Bronanza\LaravelOngkir;
 
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Config\Repository as Config;
-use Bronanza\Ongkir\Contracts\OngkirInterface;
+use Bronanza\LaravelOngkir\Contracts\OngkirInterface;
 
 class Ongkir implements OngkirInterface
 {
@@ -35,10 +33,10 @@ class Ongkir implements OngkirInterface
     public function __construct(HttpClient $client, Config $config)
     {
         $this->httpClient = $client;
-        $this->api = $config->get('raja-ongkir.api');
+        $this->api = $config->get('ongkir.api');
         $this->defaultOptions = [
             'headers' => [
-                'key' => $config->get('raja-ongkir.apiKey')
+                'key' => $config->get('ongkir.apiKey')
             ]
         ];
     }
