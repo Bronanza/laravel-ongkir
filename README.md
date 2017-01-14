@@ -83,12 +83,12 @@ class TestController extends Controller
     }
 }
 ```
-
-`getAllAvailableProvinces()` &mdash; use this method to get all available provinces in Indonesia.
-`getAllAvailableCities()` &mdash; use this method to get all available cities in Indonesia.
-`getAvailableCities()` &mdash; use this method to get available cities for the given province code. This method need 1 paramater:
+#### Explanation
+1) `getAllAvailableProvinces()` &mdash; use this method to get all available provinces in Indonesia.
+2) `getAllAvailableCities()` &mdash; use this method to get all available cities in Indonesia.3) 
+3) `getAvailableCities()` &mdash; use this method to get available cities for the given province code. This method need 1 paramater:
 - `string` province id - Province ID in Indonesia
-`getCosts()` &mdash; use this method to get shipment cost based on weight and location. This method need 4 parameter:
+4) getCosts()` &mdash; use this method to get shipment cost based on weight and location. This method need 4 parameter:
 - `string` origin id - City origin
 - `string` rajaongkir city id - City destination
 - `int` weight - Shipment weight in gram
