@@ -1,6 +1,4 @@
-<?php
-
-namespace Bronanza\Ongkir;
+<?php namespace Bronanza\LaravelOngkir;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,7 +12,7 @@ class OngkirServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../../config/raja-ongkir.php' =>  config_path('raja-ongkir.php'),
+            __DIR__.'/../config/ongkir.php' =>  config_path('ongkir.php'),
         ]);
     }
 
@@ -26,7 +24,7 @@ class OngkirServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/raja-ongkir.php', 'raja-ongkir'
+            __DIR__.'/../config/ongkir.php', 'ongkir'
         );
     }
 }
